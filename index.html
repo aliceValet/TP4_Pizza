@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Pimp my Pizza.com</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/x-ico" href="images/pizza.ico" />
+
+    <!-- Loading Bootstrap -->
+    <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Loading Flat UI -->
+    <link href="node_modules/flat-ui/css/flat-ui.css" rel="stylesheet">
+    <link href="css/theme.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    
+  </head>
+  <body>
+    <div class="container">
+        <div class="headline">
+            <h1 class="logo">
+              <div class="logo"></div>
+              Pimp my Pizza
+              <small>Cooked with love</small>
+            </h1>
+        </div>
+        <div class="row typography-row main">
+
+            <div class="type pizza-type">
+                <span class="text-note">Recette</span>
+                <label>
+                    <input type="radio" name="type" value="margherita" data-toggle="radio" data-price="8">
+                    Margherita (8€)
+                    <span class="description no-display">Tomate, mozzarella, basilic, huile d'olive</span>
+                </label>
+
+                <label>
+                    <input type="radio" name="type" value="reine" data-toggle="radio" data-price="10">
+                    Reine (10€)
+                    <span class="description no-display ">Mozzarella, champignons, artichaut, jambon, olives, huile d'olive</span>
+                </label>
+                
+                <label>
+                    <input type="radio" name="type" value="quattro stagioni" data-toggle="radio" data-price="12">
+                    Quattro stagioni (12€)
+                    <span class="description no-display ">Tomate, mozzarella, basilic, huile d'olive</span>
+                </label>
+
+                <label>
+                    <input type="radio" name="type" value="sicilienne" data-toggle="radio" data-price="11">
+                    Sicilienne (11€)
+                    <span class="description no-display ">Tomate, mozzarella, basilic, anchois, câpres,champignon</span>
+                </label>
+            </div>
+
+            <div class="type nb-parts">
+                <span class="text-note">Nombre de parts</span>
+                <input type="text" value="1"/>
+                <span class="pizza-1 pizza-pict"></span>
+            </div>
+
+            <div class="type">
+                <span class="text-note">Pâte</span>
+                <label><input type="radio" name="pate" value="1" data-toggle="radio" data-price="0">Classique</label>
+                <label><input type="radio" name="pate" value="1" data-toggle="radio" data-price="2">Extra fine (+2€)</label>
+                <label><input type="radio" name="pate" value="1" data-toggle="radio" data-price="3">Epaisse (+3€)</label>
+            </div>
+
+            <div class="type">
+                <span class="text-note">Extras</span>
+                    <label><input name="extra" type="checkbox" value="1" data-price="1" data-toggle="checkbox">Olives (+1€)</label>
+                    <label><input name="extra" type="checkbox" value="2" data-price="4" data-toggle="checkbox">Anchois (+4€)</label>
+                    <label><input name="extra" type="checkbox" value="3" data-price="3" data-toggle="checkbox">Chèvre (+3€)</label>
+                    <label><input name="extra" type="checkbox" value="4" data-price="1" data-toggle="checkbox">Piment (+1€)</label>
+            </div>
+
+            <div class="infos-client no-display ">
+                <div class="type">
+                    <span class="text-note">Prénom</span>
+                    <input type="text"/>
+                </div>
+                <div class="type">
+                    <span class="text-note">Adresse</span>
+                    <input type="text"/>
+                    <button class="btn btn-default add">Ajouter une autre ligne d'adresse</button>
+                </div>
+                <div class="type">
+                    <span class="text-note">Code Postal</span>
+                    <input type="number"/>
+                </div>
+                <br />
+                <button class="btn btn-success done">Allez hop, j'ai très faim !</button>
+            </div>
+            <p><small>Les prix sont affichés pour 1 pizza entière.</small></p>
+            <button class="btn btn-success next-step">Etape suivante</button>
+        </div>
+    </div>
+    <!-- /.container -->
+
+    <div class="stick-right">
+      <div class="tile">
+        <img src="images/icons/svg/paper-bag.svg" class="tile-image big-illustration">
+        <h3 class="tile-title">Total</h3>
+        <p>0 €</p>
+        <a class="btn btn-primary btn-large btn-block" href="#">Payer</a>
+      </div>
+    </div>
+    
+  </body>
+</html>
