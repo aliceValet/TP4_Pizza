@@ -30,7 +30,7 @@ Question bonus:
 
 Faire une nouvelle branche dans votre repository que l'on appelera "bonus". Dans le cadre de cette question bonus, vous avez le droit de modifier le html
 
-1 - Rendre la page responsive
+1 - S'il fait moins de 0 degrès celsius augmenter le prix de 5 euros pour le tips du livreur.
 
 
 ----------
