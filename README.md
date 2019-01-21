@@ -40,16 +40,29 @@ AIDE // Code Snippets
 ---------------------
 
 - Récupérer une checkbox coché en jQuery :
+
 `$('input[name=example]:checked');`
 
 - Boucler sur tous les elements cochés :
+
 `$('input[name=group]:checked').each(function() {
 	total += $(this).data('price');
 });`
 
 - Caster un string en int (grâce à +) :
+
 `var number = +$('input.element’).val();`
 
 - Dupliquer un élément HTML en jQuery pour l'insérer à plusieurs endroits :
+
 `var element = $('<span class="my-class"></span>');
 var new_element = element.clone();`
+
+- Faire une requete HTML avec de l'AJAX
+
+``
+$.get( "https://api.openweathermap.org/data/2.5/weather?q=paris&appid=768a35a09a1701be84498950a95e7cf5")
+  .done(function( data ) {
+    console.log( "Data Loaded: " + data );
+  });
+	``
