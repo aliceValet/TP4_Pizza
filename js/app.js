@@ -9,37 +9,26 @@ function addAddressInputs(){
 	$("<br/><input type='text'/>").insertBefore(this);
 }
 function validateOrder(){
-	let prenom = $('.text').val();
-	alert(prenom);
-	$("input").val("");
+	let prenom = $('input:eq(12)').val();
+	$(".main").empty();
+
+	setTimeout(() => alert("Merci " + prenom + " votre commande sera prête dans 15 min"), 100);
 }
 function calculatePrice(){
+
 	let sum=0;
-	if ($("input[value=margherita]").checked){
-		sum+=((($("input[value=margherita]").getAttribute("data-price"))/6)*$(".nb-parts input").val());
-
-	}
-	else if($("input[value=reine]").checked){
-		sum+=((($("input[value=reine]").getAttribute("data-price"))/6)*$(".nb-parts input").val());
-	}
-	else if ($("input[value=quattro stagioni]").checked){
-		sum+=((($("input[value=quattro stagioni]").getAttribute("data-price"))/6)*$(".nb-parts input").val());
-	}
-	else if($("input[value=sicilienne]").checked){
-		sum+=((($("input[value=sicilienne]").getAttribute("data-price"))/6)*$(".nb-parts input").val());
-	}
-
-	$('input[name=extra]:checked').each(
+	sum+=(($("input[name='type']:checked").attr("data-price") || 0)/6)*$(".nb-parts input").val();
+	$('input[name="extra"]:checked').each(
 		function() { 
 			sum += $(this).data('price'); 
 		}
 		);
-	$('input[name=pate]:checked').each(
+	$('input[name="pate"]:checked').each(
 		function() { 
 			sum += $(this).data('price'); 
 		}
 		);
-	$(".tile h3 p").text(""+sum);
+	$(".tile p").text(sum);
 
 }
 $(document).ready(function(){
@@ -67,18 +56,10 @@ $(document).ready(function(){
 	//const nbParts = $(this).val();
 	//$(".pizza-pic").remove();	
 	//})
-	$('.next-step').click(
-		showContactForm
-		);
-	$('.add').click(
-		addAddressInputs
-		);
-	
-	if ($(".pizza-type label").checked){
-		calculatePrice;
-	}
-	$('.done').click(
-		validateOrder
-		);
+	$('.next-step').click(showContactForm);
+	$('.add').click(addAddressInputs);
+	$("input[data-price").change(calculatePrice);
+	$('.done').click(validateOrder);
+
 
 });
